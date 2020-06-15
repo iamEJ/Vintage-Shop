@@ -30,13 +30,16 @@ public class Product {
 	@NotNull
 	private String photoUrl;
 	
+	private boolean featured;
+	
 	public Product() {}
 	
-	public Product(String title, String description, double price, String photoUrl) {
+	public Product(String title, String description, double price, String photoUrl,boolean featured) {
 		this.title = title;
 		this.description = description;
 		this.price = price;
 		this.photoUrl = photoUrl;
+		this.featured = featured;
 	}
 
 	public Long getId() {
@@ -77,6 +80,14 @@ public class Product {
 
 	public void setPhotoUrl(String photoUrl) {
 		this.photoUrl = photoUrl;
+	}
+
+	public boolean isFeatured() {
+		return featured;
+	}
+
+	public void setFeatured(boolean featured) {
+		this.featured = featured;
 	}
 	
 	
