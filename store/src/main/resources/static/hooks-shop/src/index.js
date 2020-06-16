@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import ProductProvider from "./context/products";
+import { CartProvider } from "./context/Cart";
 
 ReactDOM.render(
   <React.StrictMode>
     <ProductProvider>
-      <App />
+      <CartProvider>
+        <App />
+      </CartProvider>
     </ProductProvider>
   </React.StrictMode>,
   document.getElementById("root")

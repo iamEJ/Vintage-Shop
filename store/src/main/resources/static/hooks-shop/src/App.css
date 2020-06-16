@@ -113,9 +113,9 @@
 .addtocard {
   background-color: #e00d0d;
   color: #fff;
-  -webkit-box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.75);
 }
 
 .addtocard:hover {
@@ -124,12 +124,63 @@
 }
 
 .productImage {
-  -webkit-box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
   width: 340px;
 }
 
 .price {
+  color: #e00d0d;
+}
+
+.empty {
+  margin-top: 120px;
+}
+
+.cartbutton {
+  background-color: #e00d0d;
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 5px 25px;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.75);
+}
+
+.cartbutton:hover {
+  background-color: #181818;
+  color: #fff;
+}
+
+.section {
+  margin-top: 50px;
+  width: 700px;
+  align-items: center;
+  padding: 20px 0;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
+
+.cartImg {
+  width: 100px;
+}
+
+.removeBtn {
+  color: #a1a1a1;
+  padding: 0;
+}
+
+.amount {
+  margin: 0;
+  margin-left: 2px;
+}
+.arrow {
+  margin-left: 1px;
+}
+
+.arrow:hover {
   color: #e00d0d;
 }
