@@ -109,3 +109,27 @@
 .cardContainer:hover .productCard {
   opacity: 0.3;
 }
+
+.addtocard {
+  background-color: #e00d0d;
+  color: #fff;
+  -webkit-box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
+}
+
+.addtocard:hover {
+  background-color: #181818;
+  color: #fff;
+}
+
+.productImage {
+  -webkit-box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
+  width: 340px;
+}
+
+.price {
+  color: #e00d0d;
+}
