@@ -21,16 +21,22 @@ export default function Cart() {
         {cart.map((item) => {
           return <CartItem key={item.id} {...item} />;
         })}
-        <h2>Total: {total}$</h2>
-        {user ? (
-          <Link to="/checkout" className="btn cartbutton">
-            Check out
+
+        <div>
+          <h2>Total: {total}$</h2>
+          {user ? (
+            <Link to="/checkout" className="btn cartbutton">
+              Check out
+            </Link>
+          ) : (
+            <Link to="/login" className="btn cartbutton">
+              Login
+            </Link>
+          )}
+          <Link to="/products" className="btn cartbutton ml-2">
+            Add more
           </Link>
-        ) : (
-          <Link to="/login" className="btn cartbutton">
-            Login
-          </Link>
-        )}
+        </div>
       </Card>
     </div>
   );

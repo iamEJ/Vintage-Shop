@@ -141,7 +141,7 @@
 .cartbutton {
   background-color: #e00d0d;
   color: #fff;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 30px;
   padding: 5px 25px;
   -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.75);
@@ -183,4 +183,14 @@
 
 .arrow:hover {
   color: #e00d0d;
+}
+
+.cartBadge {
+  background-color: #e00d0d;
+  color: #fff;
+  padding: 2px 6px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 14px;
+  margin-left: -10px;
 }

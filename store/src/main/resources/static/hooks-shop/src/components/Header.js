@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
-import { faSignInAlt, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import CartLink from "./Cart/CartLink";
 
 export default function Header() {
   return (
@@ -26,9 +27,8 @@ export default function Header() {
         <Link className="navButton" to="/login">
           <FontAwesomeIcon icon={faSignInAlt} />
         </Link>
-        <Link className="navButton" to="/cart">
-          <FontAwesomeIcon icon={faShoppingCart} />
-        </Link>
+
+        <CartLink />
       </Nav>
     </Navbar>
   );
