@@ -39,14 +39,7 @@ public class StoreApplication implements CommandLineRunner
 		productService.createProduct(p7);
 		productService.createProduct(p8);
 		
-		productService.createProduct(p1);
-		productService.createProduct(p2);
-		productService.createProduct(p3);
-		productService.createProduct(p4);
-		productService.createProduct(p5);
-		productService.createProduct(p6);
-		productService.createProduct(p7);
-		productService.createProduct(p8);
+		
 	}
 
 }
