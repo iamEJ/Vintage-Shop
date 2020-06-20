@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import url from "../utils/URL";
-import { FeaturedProducts, featuredProducts } from "../utils/Helpers";
+import { featuredProducts } from "../utils/Helpers";
 
 export const ProductContext = React.createContext();
 
@@ -12,7 +12,7 @@ export default function ProductProvider({ children }) {
 
   React.useEffect(() => {
     setLoading(true);
-    axios.get(`${url}`).then((response) => {
+    axios.get(`${url}/products`).then((response) => {
       const featured = featuredProducts(response.data);
       setProducts(response.data);
       setFeatured(featured);

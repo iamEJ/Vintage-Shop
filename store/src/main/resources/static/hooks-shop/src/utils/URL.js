@@ -1,1 +1,5 @@
-export default "http://localhost:8080/products";
+//spring host
+export default "http://localhost:8080";
+
+//strapi host
+//export default "http://localhost:1337";
