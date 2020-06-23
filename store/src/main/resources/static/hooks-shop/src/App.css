@@ -273,3 +273,35 @@ input.form-control:focus {
 .submitButton:hover {
   background-color: #181818;
 }
+
+.scrollBtnShow {
+  display: block;
+  background-color: #181818;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.scrollBtnShow:hover {
+  background-color: #333333;
+}
+.scrollBtnHide {
+}
+
+@media screen and (max-width: 650px) {
+  .bannertext {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .bannertext h1 {
+    font-size: 20px;
+  }
+
+  .bannertext p {
+    font-size: 14px;
+  }
+}
