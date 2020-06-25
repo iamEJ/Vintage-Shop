@@ -25,7 +25,7 @@ public class Product {
 
 	private boolean featured;
 
-	private boolean onSale;
+	private boolean freeShipping;
 	@NotNull
 	private Category category;
 
@@ -38,7 +38,7 @@ public class Product {
 			double price,
 			String photoUrl,
 			boolean featured, 
-			boolean onSale,
+			boolean freeShipping,
 			Category category
 			) {
 		this.title = title;
@@ -46,7 +46,7 @@ public class Product {
 		this.price = price;
 		this.photoUrl = photoUrl;
 		this.featured = featured;
-		this.onSale = onSale;
+		this.freeShipping = freeShipping;
 		this.category = category;
 	}
 
@@ -98,12 +98,12 @@ public class Product {
 		this.featured = featured;
 	}
 
-	public boolean isOnSale() {
-		return onSale;
+	public boolean isFreeShipping() {
+		return freeShipping;
 	}
 
-	public void setOnSale(boolean onSale) {
-		this.onSale = onSale;
+	public void setFreeShipping(boolean freeShipping) {
+		this.freeShipping = freeShipping;
 	}
 
 	public Category getCategory() {

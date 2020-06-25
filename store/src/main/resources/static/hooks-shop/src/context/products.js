@@ -16,7 +16,7 @@ export default function ProductProvider({ children }) {
   const [filters, setFilters] = React.useState({
     search: "",
     category: "all",
-    onSale: false,
+    shipping: false,
     price: "all",
   });
 
@@ -32,12 +32,60 @@ export default function ProductProvider({ children }) {
     return () => {};
   }, []);
 
+  React.useEffect(() => {
+    let newProducts = [...products].sort((a, b) => a.price - b.price);
+    const { search, category, shipping, price } = filters;
+
+    if (category !== "all") {
+      newProducts = newProducts.filter((item) => item.category === category);
+    }
+
+    if (shipping !== false) {
+      newProducts = newProducts.filter(
+        (item) => item.freeShipping === shipping
+      );
+    }
+
+    if (search !== "") {
+      newProducts = newProducts.filter((item) => {
+        let title = item.title.toLowerCase().trim();
+        return title.includes(search) ? item : null;
+      });
+    }
+
+    if (price !== "all") {
+      newProducts = newProducts.filter((item) => {
+        if (price === 0) {
+          return item.price < 500;
+        } else if (price === 500) {
+          return item.price >= 500 && item.price < 1000;
+        } else {
+          return item.price >= 1000;
+        }
+      });
+    }
+
+    setPage(0);
+    setSorted(paginate(newProducts));
+  }, [filters, products]);
+
   const changePage = (index) => {
     setPage(index);
   };
 
   const updateFilters = (e) => {
-    console.log(e);
+    const type = e.target.type;
+    const filter = e.target.name;
+    const value = e.target.value;
+    let filterValue;
+    if (type === "checkbox") {
+      filterValue = e.target.checked;
+    } else if (type === "radio") {
+      value === "all" ? (filterValue = value) : (filterValue = parseInt(value));
+    } else {
+      filterValue = value;
+    }
+    setFilters({ ...filters, [filter]: filterValue });
   };
 
   return (

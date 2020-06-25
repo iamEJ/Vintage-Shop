@@ -289,8 +289,8 @@ input.form-control:focus {
 .scrollBtnShow:hover {
   background-color: #333333;
 }
-.scrollBtnHide {
-}
+/* .scrollBtnHide {
+} */
 
 .page-btn {
   margin-right: 5px;
@@ -322,6 +322,17 @@ input.form-control:focus {
 .btnPrev:hover,
 .btnNext:hover {
   color: #e00d0d;
+}
+
+select {
+  width: 200px;
+  border: none;
+  margin-top: 1px;
+  border-bottom: 2px solid #181818;
+}
+
+select:hover {
+  border-bottom: 2px solid #e00d0d;
 }
 
 @media screen and (max-width: 650px) {

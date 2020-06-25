@@ -39,6 +39,12 @@ export default function Pagination() {
       </>
     );
   } else {
-    return <h3>There are no products to display</h3>;
+    return (
+      <div className="container">
+        <h3 className="d-flex justify-content-center">
+          There are no products to display
+        </h3>
+      </div>
+    );
   }
 }
