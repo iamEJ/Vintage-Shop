@@ -33,7 +33,7 @@ export default function ProductProvider({ children }) {
   }, []);
 
   const changePage = (index) => {
-    console.log(index);
+    setPage(index);
   };
 
   const updateFilters = (e) => {
@@ -42,7 +42,16 @@ export default function ProductProvider({ children }) {
 
   return (
     <ProductContext.Provider
-      value={{ loading, products, featured, sorted, page, filters }}
+      value={{
+        loading,
+        products,
+        featured,
+        sorted,
+        page,
+        filters,
+        changePage,
+        updateFilters,
+      }}
     >
       {children}
     </ProductContext.Provider>

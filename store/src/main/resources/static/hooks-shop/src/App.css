@@ -292,6 +292,38 @@ input.form-control:focus {
 .scrollBtnHide {
 }
 
+.page-btn {
+  margin-right: 5px;
+  border: 2px solid #181818;
+  border-radius: 5px;
+}
+
+.page-btn:hover {
+  background-color: #181818;
+  color: #fff;
+}
+
+.pageBtnCurrent {
+  background-color: #181818;
+  color: #fff;
+}
+
+.btnPrev {
+  margin-right: 5px;
+  border: none;
+  background: none;
+}
+
+.btnNext {
+  border: none;
+  background: none;
+}
+
+.btnPrev:hover,
+.btnNext:hover {
+  color: #e00d0d;
+}
+
 @media screen and (max-width: 650px) {
   .bannertext {
     margin-top: 20px;
