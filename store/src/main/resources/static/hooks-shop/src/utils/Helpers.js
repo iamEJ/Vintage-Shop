@@ -12,3 +12,8 @@ export function featuredProducts(data) {
     return item.featured === true;
   });
 }
+
+// fuction for pagination
+export function paginate(products) {
+  return products;
+}

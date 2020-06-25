@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import url from "../utils/URL";
-import { featuredProducts } from "../utils/Helpers";
+import { featuredProducts, paginate } from "../utils/Helpers";
 
 export const ProductContext = React.createContext();
 
@@ -24,7 +24,7 @@ export default function ProductProvider({ children }) {
     setLoading(true);
     axios.get(`${url}/products`).then((response) => {
       const featured = featuredProducts(response.data);
-      setSorted(response.data);
+      setSorted(paginate(response.data));
       setProducts(response.data);
       setFeatured(featured);
       setLoading(false);
